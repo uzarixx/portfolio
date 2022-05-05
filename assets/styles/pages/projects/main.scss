@@ -1,0 +1,250 @@
+@use '../../breakpoints' as bp;
+
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: bp.$xl) {
+    flex-direction: column;
+  }
+}
+
+.block__left-wrap-lst {
+  color: white;
+  text-align: left;
+
+  @media (max-width: bp.$xl) {
+    display: none;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+  }
+
+  p {
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    color: red;
+
+    span {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: .5px;
+      color: rgba(192, 192, 192, 1);
+    }
+  }
+}
+
+
+.block__left {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  @media (min-width: bp.$xl) {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 950px;
+    .block__left-wrap-frst {
+      //flex-direction: row;
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media (max-width: bp.$xl) {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+  }
+
+
+  .header__logo {
+    img {
+      margin-left: -50px;
+      @media (max-width: bp.$xl) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .header__title {
+    font-size: 25px;
+    color: #ff2b51;
+    font-weight: 500;
+    margin-left: -57px;
+    display: flex;
+    @media (max-width: bp.$xl) {
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 25px;
+      span {
+        font-size: 28px;
+        font-weight: 600;
+        margin-right: 5px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .adaptive__links {
+    @media (min-width: bp.$xl) {
+      display: none;
+    }
+    @media (max-width: bp.$xl) {
+      font-size: 24px;
+      font-weight: 600;
+      ul {
+
+        display: flex;
+
+        li {
+          margin-right: 15px;
+        }
+
+        li:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.block__center {
+  width: 100%;
+  margin: 0 90px;
+
+  @media (max-width: bp.$xl) {
+    margin: 0 15px;
+  }
+
+  .main__cards {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 930px;
+    overflow-x: auto;
+    align-items: center;
+    @media (max-width: bp.$xl) {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .main__card {
+      img {
+        width: 600px;
+        height: 300px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        box-shadow: 9px 34px 145px -50px #ff2b51;
+        transition: 0.9s;
+        opacity: 0.3;
+        @media (max-width: bp.$xl) {
+          margin: 0;
+          margin-bottom: 20px;
+          max-width: 100%;
+
+        }
+      }
+
+      img:hover {
+        opacity: 0.7;
+
+      }
+    }
+  }
+
+  #element::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(249, 249, 253, 0);
+  }
+
+  #element::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #9f1b33;
+  }
+
+  #element::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.07);
+  }
+}
+
+
+.block__right {
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 950px;
+
+  @media (max-width: bp.$xl) {
+    display: none;
+  }
+
+  .main__links {
+    ul {
+      margin-top: 50px;
+      display: flex;
+      transform: rotate(90deg);
+      justify-content: space-between;
+      font-size: 24px;
+      font-weight: 600;
+      transform-origin: bottom left;
+
+      li {
+        margin-right: 30px;
+      }
+
+      a {
+        transition: .9s;
+      }
+
+      a:hover {
+        color: red;
+      }
+    }
+  }
+
+  .main__icons-contact {
+    @media (max-width: bp.$xl) {
+      display: none;
+    }
+
+    img {
+      width: 25px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.main__icons-contact-adaptive {
+  @media (min-width: bp.$xl) {
+    display: none;
+  }
+
+  img {
+    width: 25px;
+    margin: 5px;
+  }
+}

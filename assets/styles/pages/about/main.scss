@@ -1,0 +1,150 @@
+@use '../../breakpoints' as bp;
+
+body {
+  overflow: hidden;
+}
+
+.image__ellipse-first {
+  position: absolute;
+  border: 37px solid #E40037;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+
+}
+
+.image__ellipse-last {
+  position: absolute;
+  border: 37px solid #E40037;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+}
+
+
+.header {
+  width: 100%;
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 2;
+    li {
+      margin-right: 20px;
+
+      a {
+        color: white;
+        font-weight: 800;
+        font-size: 24px;
+        transition: 0.8s;
+      }
+
+      a:hover {
+        color: #E40037;
+      }
+    }
+  }
+}
+
+.aboutme__eng, .aboutme__ru {
+  z-index: 2;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  height: 950px;
+
+
+  .main__first-block {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+    //flex-direction: column;
+
+    @media (max-width: bp.$lg) {
+      height: 950px;
+      overflow: auto;
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .ru__title, .eng__title {
+      padding-left: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 5px;
+
+      @media (max-width: bp.$lg) {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: bp.$lg) {
+      .ru__title {
+        padding-top: 300px;
+      }
+      @media (max-width: bp.$sm) {
+        padding-top: 500px;
+      }
+      @media (max-width: bp.$xs) {
+        padding-top: 700px;
+      }
+    }
+
+    .ru__text, .eng__text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 7px;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #a9a9a9;
+      border: 0.2px solid #E40037;
+      z-index: 2;
+
+      margin: 0 5px;
+      @media (min-width: bp.$xxl) {
+        height: 500px;
+      }
+
+      span {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .main__last-block {
+    //width: 100%;
+  }
+}
+
+@media (max-width: bp.$lg) {
+  .aboutme__ru {
+    padding-top: 100px;
+  }
+}
+
+.line {
+  position: absolute;
+  margin-top: 105px;
+  z-index: 0;
+}
