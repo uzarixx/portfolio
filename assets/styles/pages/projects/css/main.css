@@ -164,7 +164,7 @@
 }
 @media (max-width: 1280px) {
   .block__center {
-    margin: 0 15px;
+    margin: 0 0;
   }
 }
 .block__center .main__cards {
