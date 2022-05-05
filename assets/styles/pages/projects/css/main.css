@@ -194,6 +194,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 100%;
   }
 }
 .block__center .main__cards .main__card img {
