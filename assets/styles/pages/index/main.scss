@@ -1,4 +1,10 @@
 @use '../../breakpoints' as bp;
+
+main {
+  overflow: hidden;
+}
+
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;

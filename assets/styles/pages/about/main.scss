@@ -1,7 +1,15 @@
 @use '../../breakpoints' as bp;
 
-body {
-  overflow: hidden;
+@media (min-width: bp.$lg) {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: bp.$lg) {
+  body {
+    overflow-X: hidden;
+  }
 }
 
 .image__ellipse-first {
@@ -35,20 +43,24 @@ body {
   min-height: 50px;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    z-index: 2;
+    z-index: 50;
+
     li {
       margin-right: 20px;
+      z-index: 2;
 
       a {
         color: white;
         font-weight: 800;
         font-size: 24px;
         transition: 0.8s;
+        z-index: 2;
       }
 
       a:hover {
@@ -81,7 +93,7 @@ body {
 
     @media (max-width: bp.$lg) {
       height: 950px;
-      overflow: auto;
+      //overflow: auto;
       flex-direction: column;
       padding-left: 0;
       padding-right: 0;
